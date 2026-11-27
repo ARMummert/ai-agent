@@ -10,10 +10,12 @@ dependencies = [
     { name = "langchain-core" },
     { name = "langchain-ollama" },
     { name = "langgraph" },
+    { name = "ollama" },
 ]
 
 [package.dev-dependencies]
 dev = [
+    { name = "httpx" },
     { name = "pytest" },
     { name = "ruff" },
 ]
@@ -23,10 +25,12 @@ requires-dist = [
     { name = "langchain-core", specifier = ">=1.8.4" },
     { name = "langchain-ollama", specifier = ">=1.2.0" },
     { name = "langgraph", specifier = ">=1.2.24" },
+    { name = "ollama", specifier = ">=0.6.3" },
 ]
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "httpx", specifier = ">=0.28.1" },
     { name = "pytest", specifier = ">=9.2.0" },
     { name = "ruff", specifier = ">=0.17.6" },
 ]

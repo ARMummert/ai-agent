@@ -47,3 +47,21 @@ class TestModel:
 
         assert llm.model == model_name
         assert llm.base_url == base_url
+
+    def test_create_model_uses_default_temperature(
+        self,
+        expected_default_temperature: float,
+    ):
+
+        llm = create_model()
+
+        assert llm.temperature == expected_default_temperature
+
+    def test_create_model_accepts_custom_temperature(
+        self,
+        temperature: float,
+    ):
+
+        llm = create_model(temperature=temperature)
+
+        assert llm.temperature == temperature
